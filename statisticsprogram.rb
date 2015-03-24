@@ -45,3 +45,4 @@ end
 f = File.new('./data_with_zscores.csv', 'w')
 f.write new_data_points.join("\n")
 f.close
+
