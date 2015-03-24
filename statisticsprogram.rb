@@ -42,16 +42,6 @@ data_points.each do |data_point|
 end
 
 # put z scores in csv file with data
-f = File.new('./data_with_zscores.csv', 'r')
-data_string2 = f.read
-f.close
-
-data_points2 = data_string2.split(',')
-
 f = File.new('./data_with_zscores.csv', 'w')
-all_data = data_points2 + new_data_points
-f.write all_data
+f.write new_data_points.join("\n")
 f.close
-new_data = all_data.join(',')
-
-# not finished yet
